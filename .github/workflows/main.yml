@@ -66,7 +66,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull egorzhit/infra_action
+          sudo docker pull egorzhit/infra_actions
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 egorzhit/infra_action
+          sudo docker run --rm -d -p 5000:5000 egorzhit/infra_actions
